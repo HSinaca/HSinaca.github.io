@@ -6,36 +6,34 @@
   <link rel="stylesheet" href="style.css">
   <script>
   /* Defining Table
- INPUT:  Get two numbers from two different input boxes - x and y
- PROCESSING: Add the two numbers together store in sum
- OUTPUT: Display sum on the document
+ INPUT:  Get input from user x.
+ PROCESSING: Divide the value by 2.205.
+ OUTPUT: Display value in kilograms and display.
 */ 
 
-function addNumbers() {
+function Convert() {
 	//INPUT
-	 let x = parseFloat(document.getElementById('number1').value);
-	 let y = parseFloat(document.getElementById('number2').value);
+	 let x = parseFloat(document.getElementById('pounds').value);
 	//PROCESSING
-	 let sum = x + y;
+	 let division = x / 2.205
 	//OUTPUT
-	 document.getElementById('output').innerHTML = "The sum of " + x + " and " + y + " equals " + sum + "!";
+	 document.getElementById('output').innerHTML = x + " " + "Pounds" + " " + "are" + " " + division.toFixed(1) + " " + "Kilograms";
 }
   </script>
 </head>
 
 
 <header>
-	<h1>Week 4: Add Two Numbers</h1>
-	<h2>Student Name</h2>
+	<h1>Week 5: Pounds to Kilograms</h1>
+	<h2>Hector Sinaca Gomez</h2>
 </header>
 <main>
-	<h3>Add Two Numbers</h3>
-	<label>Enter Number One: <input type="text" id="number1"></label>
-  <label>Enter Number Two: <input type="text" id="number2"></label>
-	<label><button onclick="addNumbers()">Add Numbers</button></label>
+	<h3> Convertor </h3>
+	<label> Pounds: <input type="text" id="pounds"></label>
+	<label><button onclick="Convert()">Convert</button></label>
 	<hr>
 	<p><span id="output"></span></p>
 </main>
 <footer>
-	&copy;2019 &bull; Student Name &bull; BYU-Idaho &bull; CIT 160
+	&copy;2019 &bull; Hector Sinaca Gomez &bull; BYU-Idaho &bull; CIT 160
 </footer>
