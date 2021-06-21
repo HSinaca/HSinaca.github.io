@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="style.css">
+        <title>Calculator</title>
+    </head>
+
+    <body>
+        Number 1:<input type="text" id="num1" />
+        Operator:<input type="text" id="operator"/>
+        Number 2:<input type="text" id="num2"/>
+        Answer:<input type="text" id="answer"/>
+        <button type="button" onclick="checkMath()">Check Math</button>
+        <div id="output"></div>
+        <script>
+        function checkMath() {
+        //get 2 inputs, an operartor, and a answer from user
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let operator = document.getElementById("operator").value;
+            let num2 = parseFloat(document.getElementById("num2").value);
+            let answer = parseFloat (document.getElementById("answer").value);
+            let message = "";
+            let answerkey = 0;
+            //Processing
+            switch (operator) {
+                case "+":
+                    answerkey = num1 + num2;
+                    break;
+                case "-":
+                    answerkey = num1 - num2;
+                    break;
+                case "/":
+                    answerkey = num1 / num2;
+                    break;
+                case "*":
+                    answerkey = num1 * num2;
+                    break;
+                default:
+                    Text= "Incorrect";
+
+                if (answerkey == answer) {
+                    message = "Correct!!";
+                }
+
+        }
+        //Output
+        document.getElementById("output").innerHTML= message;
+    }
+    </script>
+</html>

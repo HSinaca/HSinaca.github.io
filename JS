@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+   <head>
+      <script>
+        function CALCULATOR()
+        {
+            var x = Number(document.getElementById('x').value);
+            var y = Number(document.getElementById('y').value);
+            var ch = document.getElementById("op").value;
+            if(ch == 'add')
+              alert(x+' + '+y+" = "+(x+y));
+            else if(ch == 'sub')
+              alert(x+' - '+y+" = "+(x-y));
+            else if(ch == 'mul')
+              alert(x+' * '+y+" = "+(x*y));
+            else if(ch == 'divide')
+              if(y == 0)
+                alert("Can't divide number by zero")
+              else
+                alert(x+' / '+y+" = "+(x/y));
+        }
+
+      </script>
+
+   </head>
+    <body>
+
+     <input id="x">
+     <select name="op" id="op">
+       <option value="add">+</option>
+       <option value="sub">-</option>
+       <option value="mul">*</option>
+       <option value="divide">/</option>
+     </select>
+     <input id="y">
+     <button onclick="CALCULATOR()">+</button>
+
+     <div id="result
