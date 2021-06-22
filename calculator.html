@@ -20,30 +20,28 @@
             let operator = document.getElementById("operator").value;
             let num2 = parseFloat(document.getElementById("num2").value);
             let answer = parseFloat (document.getElementById("answer").value);
-            let message = "";
+            let message = "Incorrect";
             let answerkey = 0;
             //Processing
             switch (operator) {
-                case "+":
+                case ("+"):
                     answerkey = num1 + num2;
                     break;
-                case "-":
+                case ("-"):
                     answerkey = num1 - num2;
                     break;
-                case "/":
+                case ("/"):
                     answerkey = num1 / num2;
                     break;
-                case "*":
+                case ("*"):
                     answerkey = num1 * num2;
                     break;
                 default:
-                    Text= "Incorrect";
-
-                if (answerkey == answer) {
-                    message = "Correct!!";
-                }
-
-        }
+                    message = "Operator Not Found";
+            }
+            if (answerkey == answer) {
+                message = "Correct!!";
+            }
         //Output
         document.getElementById("output").innerHTML= message;
     }
