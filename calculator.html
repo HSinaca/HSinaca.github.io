@@ -27,7 +27,7 @@
             let operator = document.getElementById("operator").value;
             let num2 = parseFloat(document.getElementById("num2").value);
             let answer = parseFloat (document.getElementById("answer").value);
-            let message = "Incorrect";
+            let message = "Incorrect 😢";
             let answerkey = 0;
             //Processing
             switch (operator) {
@@ -47,7 +47,7 @@
                     message = "Operator Not Found";
             }
             if (answerkey == answer) {
-                message = "Correct!!";
+                message = "Correct! 🏆";
             }
         //Output
         document.getElementById("output").innerHTML= message;
