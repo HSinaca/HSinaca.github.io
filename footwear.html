@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="style.css">
+        <title>FootWear</title>
+    <p>Footwear Acoording to Weather</p>
+    <label>Choose Your Weather:</label>    
+    </head>
+    
+    <body>
+        Weather is:<select id ="weather"/>
+        <option value=""> </option>
+        <option value="hot">Hot</option>
+        <option value="rain">Rain</option>
+        <option value="snow">Snow</option>
+        <option value="unknown">Unknown</option>
+        </select>
+        <button type="button" onclick="Choose()">Confirm</button>
+        <div id="output"></div>
+    </body>
+
+        <script>
+        function Choose() {
+            //get input from user
+            let weather = document.getElementById("weather").value;
+            let footwear = 0;
+            //Processing
+            switch (weather) {
+                case ("hot"):
+                    footwear = "You'll need Sandals";
+                    break;
+                case ("rain"):
+                    footwear = "You'll need Galoshes";
+                    break;
+                case ("snow"):
+                    footwear = "You'll need Boots";
+                    break;
+                case ("unknown"):
+                    footwear = "You'll need Shoes";
+                    break;
+                default:
+                    footwear = "Try again";
+            }
+                //Output
+            document.getElementById("output").innerHTML = footwear;
+            }
+        </script>
+</html>
